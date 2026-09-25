@@ -1,0 +1,46 @@
+{
+ "dataset": "ucs",
+ "video_id": "egolife_A1_D3_001",
+ "approx_duration_s": 692,
+ "fetch_video": "huggingface-cli download cocowy1/UCS-Bench --repo-type dataset --local-dir data/UCS-Bench --include \"egolife_A1_D3_001.mp4\" \"QAs/egolife_A1_D3_001-mcq.json\"",
+ "questions": [
+  {
+   "qid": "egolife_A1_D3_001_3_T1",
+   "type": "Quantity Change Tracking",
+   "question": "Right now, can I touch the cup?",
+   "choices": [
+    "No, you can’t touch the cup.",
+    "You can reach it; it’s behind you.",
+    "At this moment, you can reach the cup, but it is positioned to your left rather than ahead.",
+    "At this moment, you can reach the cup; the cup is in front of you.",
+    "At this moment, you can reach the cup, but it is to your right instead of in front."
+   ],
+   "correct_idx": 3,
+   "expected_answer": "At this moment, you can reach the cup; the cup is in front of you.",
+   "anchor_t": 107.0,
+   "qwen_reference": {
+    "answer": "D",
+    "reply": "IDENTIFICATION: The question refers to \"the cup,\" which most specifically matches candidate [4] \"cup\" given its distinct history and proximity at the current time (t=107s), whereas the other candidates are either too distant, lack specific recent observations, or represent different types of cups (plastic/paper). Candidates [1], [2], and [3] are rejected because the trash can is behind and below, the plastic cup is further away and less distinct in the immediate context, and the paper cup is a specific subtype not implied by the generic term \"cup\" when a generic \"cup\" is available nearby.\n\nREASONING: The memory records that the generic \"cup\" (candidate [4]) was last seen at t=107s at a position 1.29 meters away, directly in front of the camera (+18 degrees) and at about eye level. This distance and position indicate that the object is within arm's reach and located ahead of the observer. Option B is ruled out because the cup is in front, not behind. Option C is incorrect because the cup is ahead, not to the left. Option E is incorrect because the cup is in front, not to the right. Option A is incorrect because the object is within reach. Therefore, the memory supports the conclusion that the cup is reachable and positioned in front.\n\nANSWER: D"
+   }
+  },
+  {
+   "qid": "egolife_A1_D3_001-mcq_fixed_7",
+   "type": "Object Trajectory",
+   "question": "What is the movement path of the pen near the whiteboard on the first floor that I see?",
+   "choices": [
+    "You climbed one flight of stairs.",
+    "You climbed three flights of stairs.",
+    "You picked up a pen from next to the whiteboard on the first floor, climbed two flights of stairs, and arrived on the second floor.",
+    "You picked up the pen by the whiteboard and climbed one flight of stairs before reaching the second floor.",
+    "You grabbed the pen next to the whiteboard, climbed three flights of stairs, and still ended up on the second floor."
+   ],
+   "correct_idx": 2,
+   "expected_answer": "You picked up a pen from next to the whiteboard on the first floor, climbed two flights of stairs, and arrived on the second floor.",
+   "anchor_t": 492.0,
+   "qwen_reference": {
+    "answer": "C",
+    "reply": "IDENTIFICATION: The question is about the \"pen\" (Object 1), as it is the only candidate object explicitly described as being held or located near a table with cups and bottles, which aligns with the \"first floor\" context of the dining/living areas where the whiteboard was also seen. The other candidates (floor lamp, whiteboard, floor) are either stationary fixtures or the ground itself, making them incorrect subjects for a question about a \"movement path\" of an item being picked up and carried.\n\nREASONING: The memory records the pen being held by the camera wearer in the living/dining area (where the whiteboard was seen) from t=176s to t=384s, and then again at the desk from t=380s to t=492s. The camera wearer's path includes climbing a staircase at t=392s-396s, moving from the first floor (living/dining) to the second floor (office). Since the pen was present in the first-floor room before the stair climb and was subsequently used at the second-floor desk, the action involves picking up the pen and climbing the stairs. The memory does not specify the exact number of flights climbed, but the transition from the living room to the office desk implies a vertical movement. Options suggesting climbing three flights or ending on the second floor after climbing three are less standard than climbing two flights to reach a second floor, or simply climbing one flight if the office is directly above. However, given the options, the most logical sequence supported by the presence of the pen before the stairs and its use after is picking it up and climbing. Option C suggests climbing two flights, which is a common interpretation for reaching a second floor from a ground floor in multi-story homes, whereas Option D suggests only one flight. Without explicit flight counts in the memory, we rely on the sequence: Pen seen -> Stairs climbed -> Pen used at desk. The memory confirms the pen was near the whiteboard area (living room) and the user moved to the office.\n\nANSWER\nC"
+   }
+  }
+ ]
+}

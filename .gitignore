@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+data/
+work/
+third_party/
+weights/
+*.mp4
+*.pt
+*.safetensors

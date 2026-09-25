@@ -1,0 +1,27 @@
+{
+ "dataset": "ucs",
+ "video_id": "egolife_A1_D6_045",
+ "approx_duration_s": 356,
+ "fetch_video": "huggingface-cli download cocowy1/UCS-Bench --repo-type dataset --local-dir data/UCS-Bench --include \"egolife_A1_D6_045.mp4\" \"QAs/egolife_A1_D6_045-mcq.json\"",
+ "questions": [
+  {
+   "qid": "egolife_A1_D6_045_1_T1",
+   "type": "Relative Position & Orientation Memory",
+   "question": "Which direction is the guitar relative to me?",
+   "choices": [
+    "Above you to your left.",
+    "Above you in front of you.",
+    "The guitar should be above you and slightly behind you, not on your right side.",
+    "The guitar should be above you to your right.",
+    "It’s positioned above you but closer to your left, rather than above-right relative to you."
+   ],
+   "correct_idx": 3,
+   "expected_answer": "The guitar should be above you to your right.",
+   "anchor_t": 199.0,
+   "qwen_reference": {
+    "answer": "D",
+    "reply": "IDENTIFICATION: The question is about the guitar, identified as object [1] because it is the only candidate matching the specific name and its recorded history in the living room. The other candidates (refrigerator and sinks) are rejected because they are kitchen appliances unrelated to the query about a musical instrument.\n\nREASONING: The memory records the guitar at two distinct positions: first standing on the floor next to a sofa, and later resting on a brown ottoman. In both instances, the guitar is described as being at \"eye level\" or slightly below, never above the camera wearer's head. Therefore, any option stating the guitar is \"above you\" is factually incorrect based on the stored descriptions. Since the guitar was observed at a front-right angle (+50 deg) during its most recent sighting, options placing it to the left or behind are inconsistent with the directional data. Option D is the only choice that correctly identifies the relative direction (right), even though the \"above\" descriptor in the option contradicts the memory's height description.\n\nANSWER: D"
+   }
+  }
+ ]
+}

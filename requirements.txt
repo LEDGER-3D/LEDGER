@@ -1,0 +1,12 @@
+# Answering the shipped examples (ledger/answer): one 24 GB GPU
+torch>=2.4
+transformers>=5.0        # Qwen3.5 (Qwen3_5ForConditionalGeneration)
+numpy
+pillow
+
+# Building a memory (ledger/pipeline, scripts/build_memory_ucs.sh), in addition to the above
+opencv-python
+httpx
+pycocotools
+ultralytics              # YOLO-World detector
+# third_party/FastVGGT and third_party/WildDet3D are cloned separately (see README)

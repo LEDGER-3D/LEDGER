@@ -1,0 +1,91 @@
+{
+ "dataset": "vq3d",
+ "clip_uid": "a044eb14-0f57-4128-9be8-4ab6fed911cf",
+ "video_uid": "2fb3b1d4-1360-4a95-931b-936b4b962a42",
+ "scan_uid": "unict_Scooter mechanic_31",
+ "approx_duration_s": 300,
+ "fetch_video": "ego4d --output_directory data/ego4d --datasets full_scale annotations --video_uids 2fb3b1d4-1360-4a95-931b-936b4b962a42   (clip a044eb14-0f57-4128-9be8-4ab6fed911cf; Ego4D licence required)",
+ "questions": [
+  {
+   "q_id": 6,
+   "object_title": "screw driver",
+   "gt_3d_scan_coords": {
+    "annotation_1": {
+     "x": -1.3588462825203171,
+     "y": -3.770596809951106,
+     "z": 0.5677089562760752
+    },
+    "annotation_2": {
+     "x": -1.3572507145999941,
+     "y": -4.029210752009532,
+     "z": 0.5025398561291267
+    }
+   },
+   "qwen_reference": {
+    "picked": "screwdriver",
+    "predicted_xyz": [
+     -3.06,
+     1.883,
+     0.446
+    ],
+    "L2_m": 0.891,
+    "success": true,
+    "reply": "{\"id\": 10, \"why\": \"The object at id 10 is labeled 'screwdriver' and has the highest 'times-seen' count (19x) among all screwdriver candidates, making it the most prominent match for the query.\"}"
+   }
+  },
+  {
+   "q_id": 7,
+   "object_title": "pliers",
+   "gt_3d_scan_coords": {
+    "annotation_1": {
+     "x": -1.9593639030492325,
+     "y": -3.4703712752754825,
+     "z": 0.5624142978677287
+    },
+    "annotation_2": {
+     "x": -1.930139472472239,
+     "y": -3.557291069062498,
+     "z": 0.42225535694378546
+    }
+   },
+   "qwen_reference": {
+    "picked": "pliers",
+    "predicted_xyz": [
+     -3.543,
+     1.727,
+     0.432
+    ],
+    "L2_m": 0.276,
+    "success": true,
+    "reply": "{\"id\": 1, \"why\": \"The query asks for 'pliers'. Candidate [1] is labeled 'pliers' and has been seen 13 times, making it the most prominent and likely match compared to candidate [2] which was seen only once.\"}"
+   }
+  },
+  {
+   "q_id": 8,
+   "object_title": "chair",
+   "gt_3d_scan_coords": {
+    "annotation_1": {
+     "x": -2.9170964525770464,
+     "y": -1.6182947661144191,
+     "z": 0.11515565230903545
+    },
+    "annotation_2": {
+     "x": -2.8718807739949597,
+     "y": -1.579468084729734,
+     "z": 0.17463752348862793
+    }
+   },
+   "qwen_reference": {
+    "picked": "stool",
+    "predicted_xyz": [
+     -1.764,
+     2.737,
+     0.474
+    ],
+    "L2_m": 0.427,
+    "success": true,
+    "reply": "{\"id\": 0, \"why\": \"The query asks for a 'chair'. Candidate [0] is labeled 'stool', which is a direct synonym for a type of chair. No other candidates are seats or chairs; candidate [9] is a 'seat' but a stool is the most specific match for the object class 'chair' in this context.\"}"
+   }
+  }
+ ]
+}

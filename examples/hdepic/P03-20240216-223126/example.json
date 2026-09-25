@@ -1,0 +1,52 @@
+{
+ "dataset": "hdepic",
+ "video_id": "P03-20240216-223126",
+ "approx_duration_s": 152,
+ "fetch_video": "HD-EPIC downloader (github.com/hd-epic/hd-epic-downloader): python hd-epic-downloader.py <out> --videos --participants 3  ->  HD-EPIC/Videos/P03/P03-20240216-223126.mp4",
+ "questions": [
+  {
+   "type": "3d_perception_object_location",
+   "question": "Where did I take the object identified by <BBOX 842.393 688.356 953.1080000000001 796.663> at <TIME 00:02:31.667 video 1> from before putting it at <TIME 00:02:31.667 video 1>?",
+   "choices": [
+    "table left from radiator",
+    "top of drawer",
+    "cupboard right from dishwasher",
+    "counter left from hob",
+    "drawer right from freezer"
+   ],
+   "correct_idx": 0,
+   "expected_answer": "table left from radiator",
+   "question_point_3d": [
+    -0.858,
+    -0.308,
+    -1.223
+   ],
+   "qwen_reference": {
+    "answer": "A",
+    "reply": "IDENTIFICATION: The question is about the \"food\" object, as its stored history explicitly describes a black bag of chips being held and then moved to rest on the table, matching the context of taking an object from one place and putting it in another. The other candidates (bowl, cup, bottle) are described as resting on the table or being held, but the \"food\" entry specifically details the transition from being held over the table to resting, which aligns with the action of \"taking... from before putting it at\" a specific location.\n\nREASONING: The memory records the \"food\" object at two distinct positions: first held in hands over the table at t=40.0s, and second resting on the table at t=92.0s. The question asks for the origin location before it was placed at the coordinates provided (which correspond to the final resting spot on the table). Since the object was held in the person's hands over the table before being placed down, the origin must be a location where the person was standing or reaching, not a surface like a drawer, cupboard, or counter that the object was sitting on. Options B, C, D, and E imply the object was resting on a specific fixture before being moved, which contradicts the memory stating it was \"held in the person's hands.\" Therefore, the memory rules out any option suggesting the object was stationary on a piece of furniture prior to the move.\n\nANSWER\nA"
+   }
+  },
+  {
+   "type": "3d_perception_object_contents_retrieval",
+   "question": "Which of these objects did the person take from the item indicated by bounding box <BBOX 695.250531284195 675.8581600051649 1250.3799792008672 1156.234349912036> in <TIME 00:02:14.967 video 1>?",
+   "choices": [
+    "something",
+    "Nothing",
+    "plate blue",
+    "plastic box, one tube of biscuits",
+    "one tube of biscuits"
+   ],
+   "correct_idx": 1,
+   "expected_answer": "Nothing",
+   "question_point_3d": [
+    0.766,
+    -0.149,
+    -1.435
+   ],
+   "qwen_reference": {
+    "answer": "B",
+    "reply": "IDENTIFICATION: The question targets a region at t=134.967s, which corresponds to the two tomato objects (candidates 1 and 2) that were visible during the interval [108.0, 136.0]s and are located within 0.5 meters of the query coordinates. The refrigerator and shelf are rejected because they are significantly further away (0.76m and 1.09m respectively) and, crucially, the refrigerator was not present in the scene after t=32.0s, making it impossible for it to be the item indicated at t=134.967s.\n\nREASONING: The memory records that the tomatoes were resting on a fabric surface on a metal shelving unit, directly above two white plastic bins with green lids, but it does not record any action of a person taking an object from this specific location. The only recorded interaction involves a person's arm reaching toward the bins below the tomatoes, not taking something from the tomatoes themselves. Since the memory explicitly states the tomatoes were \"resting\" and provides no evidence of removal or interaction with the items on the shelf at that specific moment, the memory rules out any option suggesting an object was taken. Therefore, the only supported conclusion based strictly on the provided history is that nothing was taken from the indicated item.\n\nANSWER\nB"
+   }
+  }
+ ]
+}

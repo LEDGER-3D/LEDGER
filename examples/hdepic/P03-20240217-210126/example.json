@@ -1,0 +1,52 @@
+{
+ "dataset": "hdepic",
+ "video_id": "P03-20240217-210126",
+ "approx_duration_s": 184,
+ "fetch_video": "HD-EPIC downloader (github.com/hd-epic/hd-epic-downloader): python hd-epic-downloader.py <out> --videos --participants 3  ->  HD-EPIC/Videos/P03/P03-20240217-210126.mp4",
+ "questions": [
+  {
+   "type": "3d_perception_object_location",
+   "question": "Where did I put the object identified by <BBOX 813.51111 387.501 984.3965800000001 611.3367499999999> at <TIME 00:01:36.633 video 1> after taking it at <TIME 00:01:36.633 video 1>?",
+   "choices": [
+    "freezer",
+    "table top left from bin",
+    "dishwasher",
+    "cupboard bottom left from sink",
+    "drawer left from freezer"
+   ],
+   "correct_idx": 2,
+   "expected_answer": "dishwasher",
+   "question_point_3d": [
+    -0.027,
+    -2.796,
+    -1.619
+   ],
+   "qwen_reference": {
+    "answer": "C",
+    "reply": "IDENTIFICATION: The question is about the saucepan, identified by its proximity (0.69m) to the query location and its history of being inside the dishwasher, whereas the oven, cutting board, and plate are either too far away or located on the countertop. The other objects are rejected because their stored positions and descriptions do not match the specific coordinates or the action of placing an item into an appliance.\n\nREASONING: The query coordinates (-0.03, -2.80, -1.62) are extremely close to the saucepan's recorded position at t=80.0s (-0.532, -3.243, -1.481), which is explicitly described as resting inside the lower rack of an open dishwasher. The memory rules out the table top, cupboard, and drawer options because the saucepan was never observed on the countertop or in those storage areas during the video's timeframe. The only supported option is the dishwasher, as the object's entire observed trajectory places it within the appliance's interior structure.\n\nANSWER\nC"
+   }
+  },
+  {
+   "type": "3d_perception_object_contents_retrieval",
+   "question": "Which of these objects did the person put in/on the item indicated by bounding box <BBOX 799.5460574491287 279.1099181795047 1408 835.8278957986786> in <TIME 00:02:11.967 video 1>?",
+   "choices": [
+    "tea towel, saucepan, metal ring",
+    "baking tray, plastic box lid, foil",
+    "heat diffuser, mixing bowl, tea towel",
+    "heat diffuser, plastic box lid",
+    "Nothing"
+   ],
+   "correct_idx": 4,
+   "expected_answer": "Nothing",
+   "question_point_3d": [
+    -2.314,
+    -2.646,
+    -1.094
+   ],
+   "qwen_reference": {
+    "answer": "E",
+    "reply": "IDENTIFICATION: The question asks about an object placed at coordinates (-2.31, -2.65, -1.09) m, which is spatially closest to the stored position of the pan at [-1.99, -2.48, -1.00] m, making the pan the primary candidate for the \"item indicated.\" The other candidates (spoon, bowl, cup) are either significantly further away or described as being held or located in different relative positions (e.g., the bowl is to the left of the pan, the cup is near the wall), which makes them unlikely to be the stationary item receiving an action at the specified coordinates.\n\nREASONING: The memory records the pan resting on a black stovetop next to a saucepan containing a red liquid, but it does not explicitly record the action of placing a tea towel, saucepan, metal ring, baking tray, plastic box lid, foil, heat diffuser, or mixing bowl onto the pan at the specific timestamp of 00:02:11.967. Since the stored history only confirms the pan's static position and its proximity to a saucepan without detailing the specific placement of the items listed in options A through D, the memory does not support any of those specific actions occurring. Consequently, based strictly on the provided object memories, there is no evidence of any of the listed items being put onto the indicated item.\n\nANSWER\nE"
+   }
+  }
+ ]
+}

@@ -1,0 +1,118 @@
+{
+ "dataset": "vq3d",
+ "clip_uid": "150bc185-821c-487f-b39c-4c5a0d52467d",
+ "video_uid": "8d84ee2b-5dcb-4311-9769-a52e7b68d9e1",
+ "scan_uid": "unict_Scooter mechanic_31",
+ "approx_duration_s": 300,
+ "fetch_video": "ego4d --output_directory data/ego4d --datasets full_scale annotations --video_uids 8d84ee2b-5dcb-4311-9769-a52e7b68d9e1   (clip 150bc185-821c-487f-b39c-4c5a0d52467d; Ego4D licence required)",
+ "questions": [
+  {
+   "q_id": 6,
+   "object_title": "puller slide hammer",
+   "gt_3d_scan_coords": {
+    "annotation_1": {
+     "x": -0.9681971863713704,
+     "y": -0.9440864859923824,
+     "z": 0.00938417023023408
+    },
+    "annotation_2": {
+     "x": -0.9890153811954279,
+     "y": -0.9769328180550132,
+     "z": 0.01118971185329987
+    }
+   },
+   "qwen_reference": {
+    "picked": "hammer",
+    "predicted_xyz": [
+     -0.579,
+     1.534,
+     -0.344
+    ],
+    "L2_m": 0.76,
+    "success": true,
+    "reply": "{\"id\": 38, \"why\": \"The query asks for a 'puller slide hammer'. Among the candidates, ID 38 is labeled 'hammer', which is the closest semantic match to a slide hammer, a specific type of hammer used for pulling or striking. Other hammers (ID 37) or tools like pliers/wrenches are less specific matches for the 'slide hammer' function.\"}"
+   }
+  },
+  {
+   "q_id": 7,
+   "object_title": "fire extinguisher",
+   "gt_3d_scan_coords": {
+    "annotation_1": {
+     "x": 0.64260061859387,
+     "y": -2.196309850518257,
+     "z": 0.9771892777168845
+    },
+    "annotation_2": {
+     "x": 0.6402998178273998,
+     "y": -2.200290875182887,
+     "z": 0.9749274298274118
+    }
+   },
+   "qwen_reference": {
+    "picked": "fire extinguisher",
+    "predicted_xyz": [
+     -2.363,
+     -0.71,
+     0.844
+    ],
+    "L2_m": 0.224,
+    "success": true,
+    "reply": "{\"id\": 0, \"why\": \"The label 'fire extinguisher' exactly matches the query object.\"}"
+   }
+  },
+  {
+   "q_id": 9,
+   "object_title": "wheel rim",
+   "gt_3d_scan_coords": {
+    "annotation_1": {
+     "x": -1.0203791495959038,
+     "y": -1.2421907228433122,
+     "z": 0.039008372791053875
+    },
+    "annotation_2": {
+     "x": -1.0517694956140546,
+     "y": -1.2458004464696235,
+     "z": 0.04216153343138228
+    }
+   },
+   "qwen_reference": {
+    "picked": "hubcap",
+    "predicted_xyz": [
+     -1.468,
+     1.349,
+     0.018
+    ],
+    "L2_m": 0.399,
+    "success": true,
+    "reply": "{\"id\": 8, \"why\": \"The query asks for a 'wheel rim'. In the provided memory, item [8] is labeled 'hubcap', which is a common synonym or functional equivalent for a wheel rim in this context, covering the center of the wheel.\"}"
+   }
+  },
+  {
+   "q_id": 10,
+   "object_title": "plastic bag",
+   "gt_3d_scan_coords": {
+    "annotation_1": {
+     "x": -0.4569820359480204,
+     "y": -1.889685704434245,
+     "z": 0.11389834435873676
+    },
+    "annotation_2": {
+     "x": -0.4388491951046749,
+     "y": -1.9136069374152598,
+     "z": 0.14608457799741312
+    }
+   },
+   "qwen_reference": {
+    "picked": "bag",
+    "predicted_xyz": [
+     -1.941,
+     0.515,
+     0.287
+    ],
+    "L2_m": 0.189,
+    "success": true,
+    "reply": "{\"id\": 23, \"why\": \"The label 'bag' is the closest synonym to 'plastic bag' among the candidates, whereas other items like gloves, tires, or tools do not match the query.\"}"
+   }
+  }
+ ]
+}
