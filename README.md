@@ -1,3 +1,5 @@
+> **Visualizations.** Videos and figures of the memory construction and of the stored memory for three long egocentric videos are in the supplementary zip file. Unzip it and open `index.html`, or serve the folder locally with `python3 -m http.server 8000` and visit http://localhost:8000.
+
 # LEDGER
 
 LEDGER turns an egocentric video into a **text memory**: the objects that were seen, where each
