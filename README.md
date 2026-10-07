@@ -1,8 +1,17 @@
-> **Visualizations.** Videos and figures of the memory construction and of the stored memory for three long egocentric videos are in the supplementary zip file. Unzip it and open `index.html`, or serve the folder locally with `python3 -m http.server 8000` and visit http://localhost:8000.
+# Never Look Back: Understanding Persistence in 3D Object Memory from Egocentric Videos
 
-# LEDGER
+**[Project page](https://ledger-3d.github.io/)** · Paper: coming soon
 
-LEDGER turns an egocentric video into a **text memory**: the objects that were seen, where each
+Shravan S Chaudhari<sup>1</sup>, William Paul<sup>2</sup>, Suchi Saria<sup>1</sup>, Rama Chellappa<sup>1\*</sup>, Homanga Bharadhwaj<sup>1\*</sup>
+<br><sup>1</sup>Johns Hopkins University · <sup>2</sup>Johns Hopkins University Applied Physics Laboratory · <sup>\*</sup>equal advising
+
+The project page shows the memory being built and queried in 3D, for a kitchen (HD-EPIC), a mall
+(UCS-Bench), a workshop (Ego4D VQ3D) and a stream that joins three different kitchens.
+
+## LEDGER
+
+LEDGER (Long-horizon Egocentric Descriptions, Geometry, and Event Records) is a persistent 3D object memory.
+It turns an egocentric video into a **text memory**: the objects that were seen, where each
 one was in 3D over time, what it looked like at each place, how objects related to each other,
 which place the wearer was in, and one line per sampled moment of what the wearer was doing. A
 language model then answers questions about the video **from that memory alone**, without
@@ -167,3 +176,18 @@ No video is redistributed here. Each example's `example.json` gives the dataset'
 - The VQ3D examples use the tracker-collapsed memory (`objects_3d_trajectories_tracker.json`).
 - Questions and expected answers come from the respective benchmarks and remain under their
   licences.
+
+## License
+
+The code is released under the [MIT License](LICENSE). The example memories are derived from
+UCS-Bench, HD-EPIC and Ego4D and remain subject to those datasets' terms.
+
+## Citation
+
+```bibtex
+@article{chaudhari2026neverlookback,
+  title   = {Never Look Back: Understanding Persistence in 3D Object Memory from Egocentric Videos},
+  author  = {Chaudhari, Shravan S and Paul, William and Saria, Suchi and Chellappa, Rama and Bharadhwaj, Homanga},
+  year    = {2026}
+}
+```
