@@ -1,6 +1,6 @@
 # Never Look Back: Understanding Persistence in 3D Object Memory from Egocentric Videos
 
-**[Project page](https://ledger-3d.github.io/)** · Paper: coming soon
+**[Project page](https://ledger-3d.github.io/)** · **[Paper (preview PDF)](https://ledger-3d.github.io/paper.pdf)** · arXiv: coming soon
 
 Shravan S Chaudhari<sup>1</sup>, William Paul<sup>2</sup>, Suchi Saria<sup>1</sup>, Rama Chellappa<sup>1\*</sup>, Homanga Bharadhwaj<sup>1\*</sup>
 <br><sup>1</sup>Johns Hopkins University · <sup>2</sup>Johns Hopkins University Applied Physics Laboratory · <sup>\*</sup>equal advising
