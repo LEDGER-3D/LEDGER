@@ -1,6 +1,6 @@
 # Never Look Back: Understanding Persistence in 3D Object Memory from Egocentric Videos
 
-**[Project page](https://ledger-3d.github.io/)** · **[Paper (preview PDF)](https://ledger-3d.github.io/paper.pdf)** · arXiv: coming soon
+**[Project page](https://ledger-3d.github.io/)** · **[arXiv](https://arxiv.org/abs/2610.10538)** · **[Paper (PDF)](https://ledger-3d.github.io/paper.pdf)**
 
 Shravan S Chaudhari<sup>1</sup>, William Paul<sup>2</sup>, Suchi Saria<sup>1</sup>, Rama Chellappa<sup>1\*</sup>, Homanga Bharadhwaj<sup>1\*</sup>
 <br><sup>1</sup>Johns Hopkins University · <sup>2</sup>Johns Hopkins University Applied Physics Laboratory · <sup>\*</sup>equal advising
@@ -185,9 +185,13 @@ UCS-Bench, HD-EPIC and Ego4D and remain subject to those datasets' terms.
 ## Citation
 
 ```bibtex
-@article{chaudhari2026neverlookback,
-  title   = {Never Look Back: Understanding Persistence in 3D Object Memory from Egocentric Videos},
-  author  = {Chaudhari, Shravan S and Paul, William and Saria, Suchi and Chellappa, Rama and Bharadhwaj, Homanga},
-  year    = {2026}
+@misc{chaudhari2026lookbackunderstandingpersistence,
+      title={Never Look Back: Understanding Persistence in 3D Object Memory from Egocentric Videos}, 
+      author={Shravan Chaudhari and William Paul and Suchi Saria and Rama Chellappa and Homanga Bharadhwaj},
+      year={2026},
+      eprint={2610.10538},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2610.10538}, 
 }
 ```
